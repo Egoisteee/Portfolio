@@ -1,0 +1,47 @@
+.prais {
+	padding-top: 60px;
+	&__list {
+		padding-top: 60px;
+		padding-left: 0 50px;
+		display: grid;
+        grid-template: repeat(3, 45px) / repeat(2, 360px);
+        grid-auto-rows: minmax(45px, auto);
+		column-gap: 307px;
+		row-gap: 15px;
+		justify-content: center;
+		&-item {
+			display: grid;
+			grid-template: repeat(2, minmax(21px, auto)) / repeat(2, auto);
+			row-gap: 5px;
+        	padding-left: 25px;
+		}
+		&-title {
+			position: relative;
+			padding: 0 0 0 10px;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 15px;
+				height: 15px;
+				background-color: $main-color;
+				border-radius: 100%;
+				left: -10px;
+				top: 3px;
+			}
+		}
+		&-counter {
+			justify-self: end;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 21px;
+			
+		}
+		&-text {
+			padding-left: 10px;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 18px;
+			grid-column: 1 / 3;
+		}
+	}
+}	
